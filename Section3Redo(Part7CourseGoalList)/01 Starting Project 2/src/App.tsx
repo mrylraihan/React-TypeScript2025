@@ -1,10 +1,9 @@
-import CourseGoal from './components/CourseGoal'
 import goalsImg from './assets/goals.jpg'
 import Header from './components/Header'
 import { useState } from 'react'
 import CourseGoalList from './components/CourseGoalList'
 
-type CourseGoal = {
+export type CourseGoal = {
 	title: string
 	description: string
 	id: number
@@ -23,13 +22,12 @@ export default function App() {
 			return [...prevsGoals, newGoal]
 		})
 	}
-	const removeGoalHandler = (id:number) =>{
-		setGoals((prevGoals) => {
-			return prevGoals.filter(goal=>goal.id!==id)
-		})
-		console.log("removed Goal")
-
-	}
+	// const removeGoalHandler = (id: number) => {
+	// 	setGoals((prevGoals) => {
+	// 		return prevGoals.filter((goal) => goal.id !== id)
+	// 	})
+	// 	console.log('removed Goal')
+	// }
 	console.log(goals)
 	return (
 		<>
@@ -38,21 +36,7 @@ export default function App() {
 					<h1>Your Course Goals</h1>
 				</Header>
 				<button onClick={addGoalHandler}>Add Goal</button>
-				{/* <ul>
-					{goals.map((goal) => {
-						return (
-							<li key={goal.id}>
-								<CourseGoal
-									title={goal.title}
-									description={goal.description}
-									id={goal.id}
-									removeGoal={removeGoalHandler}
-								/>
-							</li>
-						)
-					})}
-				</ul> */}
-				<CourseGoalList goals={goals} removeGoal={removeGoalHandler} />
+				<CourseGoalList goals={goals}/>
 			</main>
 		</>
 	)
