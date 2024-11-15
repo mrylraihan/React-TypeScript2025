@@ -7,8 +7,11 @@ function NewGoal(props:{addGoal:()=>void}) {
         event.preventDefault()
         console.log("Test")
         let id = Math.random()
-        new FormData(event.currentTarget)
+        const formData = new FormData(event.currentTarget)
+		const formDataObject = Object.fromEntries(formData.entries())
+		console.log(formDataObject)
         props.addGoal()
+		event.currentTarget.reset()
     }
   return (
 		<form onSubmit={(handleSubmit)}>
