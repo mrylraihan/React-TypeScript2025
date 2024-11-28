@@ -18,6 +18,7 @@ function NewGoal(props: { addGoal: (goal: CourseGoal) => void }) {
 		let id = Math.random()
 		const formData = new FormData(event.currentTarget)
 		const formDataObject: formDataGoal = Object.fromEntries(formData.entries())
+		setGoal(formDataObject)
 		let goal: CourseGoal = {
 			id: id,
 			title: formDataObject.goal!,
