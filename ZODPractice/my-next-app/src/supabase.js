@@ -12,3 +12,15 @@ export async function getAll() {
         throw new Error("error");
     }
 }
+
+export async function createTodo(todo){
+    todo.completed = true
+    console.log(todo)
+    try {
+        let { data: todo, error } = await supabase.from("todos").insert(todo);
+        return todo;
+    } catch (error) {
+        throw new Error("error");
+    }
+
+}
