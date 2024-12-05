@@ -5,7 +5,6 @@ function Form3() {
     const lastNameRef = useRef<HTMLInputElement>(null)
     const [fullName, setFullName] = useState<string>('')
     
-    console.log("Form3")
     const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
         console.log(firstNameRef.current!.value)
@@ -15,11 +14,13 @@ function Form3() {
         firstNameRef.current!.value= ""
         lastNameRef.current!.value= ""
         setFullName(`${firstName} ${lastName}`)
+		console.log(e.currentTarget)
+		console.log(e.target)
     }
   return (
 		<div>
-            <h1>FullName: {fullName}</h1>
-            <h3>FirstName: {firstNameRef.current!.value}</h3>
+            <h1>Form 3</h1>
+            <h2>FullName: {fullName}</h2>
 			<form onSubmit={onSubmitHandler}>
 				<div>
 					<label>

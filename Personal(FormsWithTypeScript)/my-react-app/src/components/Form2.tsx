@@ -30,6 +30,7 @@ function Form2() {
     console.log(name)
   return (
 		<div>
+			<h1>Form 2</h1>
 			<form onSubmit={onSubmitHandler}>
 				<div>
 					<label>
