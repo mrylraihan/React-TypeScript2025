@@ -1,4 +1,5 @@
 import './App.css'
+import AnotherWayComp from './components/AnotherWayComp';
 import CompsWithProps from './components/CompsWithProps';
 import Form1 from './components/Form1';
 import Form2 from './components/Form2';
@@ -20,6 +21,7 @@ console.log("App")
           <CompsWithProps name='mike' address='123 street'>test children</CompsWithProps>
           {/* Props without Children */}
           <CompsWithProps name='mike' address='123 street'/>
+          <AnotherWayComp name='mike' address='123 street'>test children</AnotherWayComp>
         </div>
     </>
   )
