@@ -1,7 +1,8 @@
 import React, {useRef, type FormEvent} from 'react'
 
+type NewGoalProps= (titleData:string, summaryData:string)=>void
 
-function NewGoal(props:{addGoal:(titleData:string, summaryData:string)=>void}) {
+function NewGoal(props:{addGoal:NewGoalProps}) {
 	const goalRef = useRef<HTMLInputElement>(null)
 	const summaryRef = useRef<HTMLInputElement>(null)
     
