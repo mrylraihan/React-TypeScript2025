@@ -6,6 +6,7 @@ type InfoBoxProps = {
 	children: ReactNode
 }
 function InfoBox({ mode, severity, children }: InfoBoxProps) {
+	console.log({mode, severity, children})
 	if (mode === 'hint') {
 		return (
 			<aside className='infobox infobox-hint'>
