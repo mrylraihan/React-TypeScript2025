@@ -8,14 +8,17 @@ type CourseGoalListProps = {
   onDeleteGoal: (id: number) => void;
 };
 
-export default function CourseGoalList({goals,onDeleteGoal}:CourseGoalListProps) {
+export default function CourseGoalList2({goals,onDeleteGoal}:CourseGoalListProps) {
   
   if(goals.length === 0){
     return <InfoBox mode='hint'>You have no Course Goals Yet, Start adding some</InfoBox>
   }
-  let warningBox: ReactNode = goals.length>=4? <InfoBox mode='Warning'>
+  let warningBox: ReactNode;
+  if(goals.length>=4){
+    warningBox= <InfoBox mode='Warning'>
     Your collecting too many goals, dont put too much on your plate!
-  </InfoBox>:null
+  </InfoBox>
+  }
   return (
     <>
     {warningBox}

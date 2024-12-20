@@ -4,6 +4,7 @@ import CourseGoalList from './components/CourseGoalList.tsx';
 import Header from './components/Header.tsx';
 import NewGoal from './components/NewGoal.tsx';
 import goalsImg from './assets/goals.jpg';
+import CourseGoalList2 from './components/CourseGoalList2.tsx';
 
 export type CourseGoal = {
   title: string;
@@ -35,7 +36,8 @@ export default function App() {
         <h1>Your Course Goals</h1>
       </Header>
       <NewGoal onAddGoal={handleAddGoal} />
-      <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
+      <CourseGoalList2 goals={goals} onDeleteGoal={handleDeleteGoal} />
+      {/* <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} /> */}
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import { useRef, type FormEvent } from 'react';
+import { ReactNode, useRef, type FormEvent } from 'react';
 
 type NewGoalProps = {
   onAddGoal: (goal: string, summary: string) => void;
@@ -17,7 +17,6 @@ export default function NewGoal({ onAddGoal }: NewGoalProps) {
     event.currentTarget.reset();
     onAddGoal(enteredGoal, enteredSummary);
   }
-
   return (
     <form onSubmit={handleSubmit}>
       <p>
