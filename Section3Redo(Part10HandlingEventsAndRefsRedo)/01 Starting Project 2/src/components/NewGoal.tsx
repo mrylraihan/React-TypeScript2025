@@ -33,10 +33,11 @@ function NewGoal({addGoal}: NewGoalProps) {
 			title: '',
 			description: '',
 		})
+		// e.currentTarget.reset()WONT WORK BECAUSE EACH INPUT HAS 2 WAY BINDING
 	}
 	return (
 		<div>
-			<h1>Make a Goal</h1>
+			<h1>Make a Goal state</h1>
 			<form onSubmit={onSubmitHandler}>
 				<div>
 					<label>

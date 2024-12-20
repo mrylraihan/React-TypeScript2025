@@ -4,6 +4,7 @@ import { useState } from 'react'
 import CourseGoalList from './components/CourseGoalList'
 import NewGoal from './components/NewGoal'
 import NewGoal1 from './components/NewGoalRef'
+import TestForm from './components/TestForm'
 
 export type CourseGoal = {
 	title: string
@@ -44,6 +45,9 @@ export default function App() {
 			</main>
 			<main>
 				<NewGoal1 addGoal={addGoalHandler} />
+			</main>
+			<main>
+				<TestForm/>
 			</main>
 		</>
 	)
