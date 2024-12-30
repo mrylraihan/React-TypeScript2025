@@ -2,7 +2,7 @@ import React , {type ReactNode} from 'react'
 
 type InfoBoxProps = {
     mode:'hint'|'warning',
-    children:ReactNode
+    children:ReactNode, 
 }
 
 function InfoBox({children,mode}:InfoBoxProps) {
